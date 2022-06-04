@@ -1,11 +1,17 @@
-import { ActivityIndicator, Image, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Image, StyleSheet, View } from "react-native";
 import React, { useEffect } from "react";
+import { auth } from "../firebase";
 
 const SplashScreen = ({ navigation }) => {
   useEffect(() => {
-    setTimeout(() => {
-      navigation.replace("Login");
-    }, 2000);
+    const unsubscribe = auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        navigation.replace("Home");
+      } else {
+        navigation.replace("Login");
+      }
+    });
+    return unsubscribe;
   }, []);
 
   return (

@@ -18,7 +18,6 @@ import { CheckBox } from "react-native-elements";
 const HomeScreen = ({ navigation }) => {
   const [visible, setvisible] = useState(false);
   const [data, setdata] = useState([]);
-  const [isSelected, setSelection] = useState(false);
   useLayoutEffect(() => {
     navigation.setOptions({
       headerTitle: "Home",
