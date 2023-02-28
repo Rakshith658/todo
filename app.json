@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "todo",
-    "slug": "todo",
+    "name": "TaskPlanner",
+    "slug": "TaskPlanner",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,7 +18,8 @@
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.rakshith143.todo"
+      "package": "com.stdmet.TaskPlanner",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/icon.png"

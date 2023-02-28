@@ -6,12 +6,12 @@ import "firebase/firestore";
 // require('firebase/firestore')
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCPl313Wf3-Gwc0qHGsWoGAJgZaDZeCqY8",
-  authDomain: "todo-d3f46.firebaseapp.com",
-  projectId: "todo-d3f46",
-  storageBucket: "todo-d3f46.appspot.com",
-  messagingSenderId: "918690243025",
-  appId: "1:918690243025:web:20b0d2961948850fdbc0f0",
+  apiKey: "AIzaSyA00WPoAret_VIUvq2gBfqffvwD09iQvFw",
+  authDomain: "todo-fd3b1.firebaseapp.com",
+  projectId: "todo-fd3b1",
+  storageBucket: "todo-fd3b1.appspot.com",
+  messagingSenderId: "777488664606",
+  appId: "1:777488664606:web:908d0838517ba1dcfa460f",
 };
 
 let app;

@@ -27,10 +27,19 @@ const HomeScreen = ({ navigation }) => {
             title="logout"
             iconName="logout"
             onPress={() =>
-              auth
-                .signOut()
-                .then(navigation.replace("Login"))
-                .catch((e) => Alert.alert("Waring", "Unable to logOut,Retry"))
+              Alert.alert("", "Are you sure you want to logout?", [
+                {
+                  text: "yes",
+                  onPress: () =>
+                    auth
+                      .signOut()
+                      .then(navigation.replace("Login"))
+                      .catch((e) =>
+                        Alert.alert("Waring", "Unable to logOut,Retry")
+                      ),
+                },
+                { text: "No", onPress: () => console.log("No Pressed") },
+              ])
             }
           />
         </HeaderButtons>
@@ -45,9 +54,7 @@ const HomeScreen = ({ navigation }) => {
       });
   }, []);
   const deleteItem = (item) => {
-    db.collection(auth.currentUser.email)
-      .doc(item.id)
-      .delete();
+    db.collection(auth.currentUser.email).doc(item.id).delete();
   };
   const upDateTask = (item) => {
     db.collection(auth.currentUser.email)
